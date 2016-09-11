@@ -10,5 +10,9 @@ for j=2:256
 R(i-1,j-1)=(J(i,j)+J(i-1,j)+J(i+1,j)+J(i,j+1)+J(i-1,j+1)+J(i+1,j+1)+J(i,j-1)+J(i+1,j-1)+J(i-1,j-1))/9;
 end
 end
-R=uint8(R);
-imshow(I),figure(),imshow(R);
+I=double(I);
+U=I-R;
+G=I+U;
+G=uint8(G);
+I=uint8(I);
+imshow(I),figure(),imshow(G);

@@ -14,7 +14,7 @@ disp('Without using conv2: ')
 disp('Full');
 disp(N1);
 disp('Same');
-N2=M(2:4,2:4);
+N2=N1(2:4,2:4);
 disp(N2);
 
 disp('Using conv2: ')

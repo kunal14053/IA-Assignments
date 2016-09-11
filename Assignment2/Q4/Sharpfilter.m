@@ -7,8 +7,9 @@ J=double(J);
 R=zeros(256,256);
 for i=2:256
 for j=2:256
-R(i-1,j-1)=(J(i,j)+J(i-1,j)+J(i+1,j)+J(i,j+1)+J(i-1,j+1)+J(i+1,j+1)+J(i,j-1)+J(i+1,j-1)+J(i-1,j-1))/9;
+R(i-1,j-1)=J(i+1,j)+J(i-1,j)+J(i,j+1)+J(i,j-1)-4*J(i,j);
 end
 end
 R=uint8(R);
-imshow(I),figure(),imshow(R);
+Out=I-R;
+imshow(I),figure,imshow(R),figure,imshow(Out);
