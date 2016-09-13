@@ -10,7 +10,6 @@ Out2=MotionBlur;
 
 H = fspecial('average');
 MotionBlur = imfilter(I,H,'replicate');
-imshow(MotionBlur);
 G=I-MotionBlur;
 Out3=I+G;
 
